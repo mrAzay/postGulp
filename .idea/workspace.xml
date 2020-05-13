@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07008ff2-f3ec-4367-9462-d12d335bfe09" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="07008ff2-f3ec-4367-9462-d12d335bfe09" name="Default Changelist" comment="working pcss">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style/style.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style/style.pcss.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/style.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/style.pcss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -37,7 +35,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -50,8 +48,16 @@
       <option name="presentableId" value="Default" />
       <updated>1589315616990</updated>
       <workItem from="1589315621220" duration="7623000" />
-      <workItem from="1589325601957" duration="4547000" />
+      <workItem from="1589325601957" duration="13675000" />
     </task>
+    <task id="LOCAL-00001" summary="working pcss">
+      <created>1589330717579</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589330717579</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -61,8 +67,14 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="working pcss" />
+    <option name="LAST_COMMIT_MESSAGE" value="working pcss" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1589330726772">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589330726772" />
     <state x="836" y="421" key="Github.ShareDialog" timestamp="1589325250063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -87,10 +99,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="938" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589325579790" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1589315790348">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1589389348301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589315790348" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589389348301" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1589330730878">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589330730878" />
+    <state x="767" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589384956112">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="767" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589384956112" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589315839418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
