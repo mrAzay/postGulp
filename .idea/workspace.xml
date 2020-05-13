@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07008ff2-f3ec-4367-9462-d12d335bfe09" name="Default Changelist" comment="" />
+    <list default="true" id="07008ff2-f3ec-4367-9462-d12d335bfe09" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style/style.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style/style.pcss.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/style.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/style.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +31,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -38,7 +49,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589315616990</updated>
-      <workItem from="1589315621220" duration="6933000" />
+      <workItem from="1589315621220" duration="7623000" />
+      <workItem from="1589325601957" duration="4547000" />
     </task>
     <servers />
   </component>
@@ -51,22 +63,30 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state width="938" height="275" key="GridCell.Tab.0.bottom" timestamp="1589315797948">
+    <state x="836" y="421" key="Github.ShareDialog" timestamp="1589325250063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589315797948" />
-    <state width="938" height="275" key="GridCell.Tab.0.center" timestamp="1589315797948">
+    <state x="836" y="421" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589325250063" />
+    <state x="777" y="135" key="Github.UntrackedFilesDialog" timestamp="1589325268975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589315797948" />
-    <state width="938" height="275" key="GridCell.Tab.0.left" timestamp="1589315797948">
+    <state x="777" y="135" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589325268975" />
+    <state width="938" height="275" key="GridCell.Tab.0.bottom" timestamp="1589325579791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589315797948" />
-    <state width="938" height="275" key="GridCell.Tab.0.right" timestamp="1589315797948">
+    <state width="938" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589325579791" />
+    <state width="938" height="275" key="GridCell.Tab.0.center" timestamp="1589325579790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589315797948" />
+    <state width="938" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589325579790" />
+    <state width="938" height="275" key="GridCell.Tab.0.left" timestamp="1589325579790">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589325579790" />
+    <state width="938" height="275" key="GridCell.Tab.0.right" timestamp="1589325579790">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589325579790" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1589315790348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
