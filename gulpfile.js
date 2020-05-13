@@ -12,6 +12,11 @@ const uncss = require('postcss-uncss');
 const fontMagician = require('postcss-font-magician');
 const lost = require('lost');
 const rigger = require('gulp-rigger');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
+
+
 
 
 gulp.task('css', () => {
@@ -66,6 +71,11 @@ gulp.task('html', () => {
             }));
 })
 
+gulp.task('js', () => {
+    gulp.src('./src/script/index.js')
+        .pipe(webpackStream(webpackConfig), webpack)
+        .pipe(gulp.dest('./dist/script'));
+});
 gulp.task('watch', () => {
     //Следим за изменениями в файлах и директориях и запускаем задачи, если эти изменения произошли
     gulp.watch('src/style/**/*.pcss', gulp.parallel('css'));
