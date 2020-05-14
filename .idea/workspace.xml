@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07008ff2-f3ec-4367-9462-d12d335bfe09" name="Default Changelist" comment="working pcss + html">
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    <list default="true" id="07008ff2-f3ec-4367-9462-d12d335bfe09" name="Default Changelist" comment="it seems to work?">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style/libs.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style/maps/libs.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style/maps/style.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style/style.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html_components/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/components/add.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/add.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/style.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/style.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589315616990</updated>
       <workItem from="1589315621220" duration="7623000" />
-      <workItem from="1589325601957" duration="14765000" />
+      <workItem from="1589325601957" duration="32347000" />
     </task>
     <task id="LOCAL-00001" summary="working pcss">
       <created>1589330717579</created>
@@ -62,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589393423045</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test settings">
+      <created>1589394567868</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589394567868</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,17 +91,20 @@
     </ignored-roots>
     <MESSAGE value="working pcss" />
     <MESSAGE value="working pcss + html" />
-    <option name="LAST_COMMIT_MESSAGE" value="working pcss + html" />
+    <MESSAGE value="test settings" />
+    <MESSAGE value="it seems to work" />
+    <MESSAGE value="it seems to work?" />
+    <option name="LAST_COMMIT_MESSAGE" value="it seems to work?" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1589393443773">
+    <state x="585" y="2" key="CommitChangelistDialog2" timestamp="1589414663953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589393443773" />
-    <state x="836" y="421" key="Github.ShareDialog" timestamp="1589325250063">
+    <state x="585" y="2" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589414663953" />
+    <state x="836" y="421" key="Github.ShareDialog" timestamp="1589394626385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="836" y="421" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589325250063" />
+    <state x="836" y="421" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589394626385" />
     <state x="777" y="135" key="Github.UntrackedFilesDialog" timestamp="1589325268975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

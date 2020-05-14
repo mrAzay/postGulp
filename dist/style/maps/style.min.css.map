@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.pcss"],"names":[],"mappings":"AAAA,MACI,cAAc,AACd,qBAAuB,CAC3B","file":"../style.min.css","sourcesContent":[".test{\r\n    margin: 0 auto;\r\n    background-color: black;\r\n}"]}

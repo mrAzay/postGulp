@@ -6,17 +6,38 @@ const autoprefixer = require('autoprefixer');//ставит префиксы в 
 const sourcemaps = require('gulp-sourcemaps');//создает карту css
 const cssnano = require('gulp-cssnano');//минифицирует цмм
 const atImport = require('postcss-import');//импортирует css
-const watch = require('gulp-watch');
-const browserSync = require('browser-sync');
-const uncss = require('postcss-uncss');
-const fontMagician = require('postcss-font-magician');
-const lost = require('lost');
-const rigger = require('gulp-rigger');
-const webpack = require('webpack');
-const webpackStream = require('webpack-stream');
-const webpackConfig = require('./webpack.config.js');
+const browserSync = require('browser-sync');//запускает локальный сервер
+const uncss = require('postcss-uncss');//даляет ненужный сss
+const fontMagician = require('postcss-font-magician');//автодополнение шрифтов
+const lost = require('lost');//сетка
+const rigger = require('gulp-rigger');//объеденяет html
+const webpack = require('webpack-stream');//нужен для работы с вебпаком
+const gulpIf = require('gulp-if');//иф в галп файле
+const ttf2woff = require("gulp-ttf2woff"); //конвертирует шрифты в веб-формат
+const ttf2woff2 = require("gulp-ttf2woff2"); //конвертирует шрифты в веб-формат
+const ttf2eot = require("gulp-ttf2eot"); //конвертирует шрифты в веб-формат
+const imagemin = require("gulp-imagemin");//минифиатор имг
+const recompress = require("imagemin-jpeg-recompress");//минифиатор имг+
 
+let isDev = true;
+let isProd = !isDev;
 
+let webpackConfig = {
+    output: {
+        filename: 'script.min.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: 'babel-loader',
+                exclude: /node_modules/
+            }
+        ]
+    },
+    mode: isDev ? 'development' : 'production',
+    devtool: isDev ? 'eval' : "none"
+};
 
 
 gulp.task('css', () => {
@@ -39,12 +60,13 @@ gulp.task('css', () => {
                         'Safari >= 6',
                     ],
                 }),
-                uncss({
-                    html: ['src/**/*.html']
-                })//файлы за которыми следит uncss, чтобы удалять классы, которые не используются, ignore: ['.fade'] для игнора классов
+                 uncss({
+                     html:['dist/index.html']
+                 })
+            //файлы за которыми следит uncss, чтобы удалять классы, которые не используются, ignore: ['.fade'] для игнора классов
             ]) //подключает плагины postcss
         )
-        .pipe(cssnano())//минифицируем
+        .pipe(cssnano())//минифицируемy
         .pipe(
             rename({
                 suffix: '.min',
@@ -72,15 +94,102 @@ gulp.task('html', () => {
 })
 
 gulp.task('js', () => {
-    gulp.src('./src/script/index.js')
-        .pipe(webpackStream(webpackConfig), webpack)
-        .pipe(gulp.dest('./dist/script'));
+    return gulp.src('./src/script/script.js')
+        .pipe(webpack(webpackConfig))
+        .pipe(gulp.dest('./dist/script'))
+        .pipe(
+            browserSync.reload({
+                stream: true
+            }));
 });
+
+gulp.task("font-woff", () => {
+    //перекидываем шрифты из директории src в dist, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
+    return gulp
+        .src("src/fonts/**/*.+(eot|svg|ttf|otf|woff|woff2)")
+        .pipe(ttf2woff())
+        .pipe(gulp.dest("dist/fonts/"))
+        .pipe(
+            browserSync.reload({
+                stream: true,
+            }),
+        );
+});
+
+gulp.task("font-woff2", () => {
+    //перекидываем шрифты из директории src в dist, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
+    return gulp
+        .src("src/fonts/**/*.+(eot|svg|ttf|otf|woff|woff2)")
+        .pipe(ttf2woff2())
+        .pipe(gulp.dest("dist/fonts/"))
+        .pipe(
+            browserSync.reload({
+                stream: true,
+            }),
+        );
+});
+
+gulp.task("font-eot", () => {
+    //перекидываем шрифты из директории src в dist, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
+    return gulp
+        .src("src/fonts/**/*.+(eot|svg|ttf|otf|woff|woff2)")
+        .pipe(ttf2eot())
+        .pipe(gulp.dest("dist/fonts/"))
+        .pipe(
+            browserSync.reload({
+                stream: true,
+            }),
+        );
+});
+
+gulp.task("images", () => {
+    //пережимаем изображения и складываем их в директорию dist
+    return gulp
+        .src("src/images/**/*.+(png|jpg|jpeg|gif|svg|ico)")
+        .pipe(
+            imagemin([
+                recompress({
+                    //Настройки сжатия изображений. Сейчас всё настроено так, что сжатие почти незаметно для глаза на обычных экранах. Можете покрутить настройки, но за результат не отвечаю.
+                    loops: 4, //количество прогонок изображения
+                    min: 70, //минимальное качество в процентах
+                    max: 80, //максимальное качество в процентах
+                    quality: "high", //тут всё говорит само за себя, если хоть капельку понимаешь английский
+                }),
+                imagemin.gifsicle(), //тут и ниже всякие плагины для обработки разных типов изображений
+                imagemin.optipng(),
+                imagemin.svgo(),
+            ]),
+        )
+        .pipe(gulp.dest("dist/images"))
+        .pipe(
+            browserSync.reload({
+                stream: true,
+            }),
+        )
+});
+
+gulp.task("deletefonts", () => {
+    //задачи для очистки директории со шрифтами в dist. Нужна для того, чтобы удалить лишнее.
+    return del.sync("dist/fonts/**/*.*");
+});
+
+gulp.task("deleteimg", () => {
+    //аналогично предыдущей, но с картинками.
+    return del.sync("dist/img/**/*.*");
+});
+
 gulp.task('watch', () => {
     //Следим за изменениями в файлах и директориях и запускаем задачи, если эти изменения произошли
     gulp.watch('src/style/**/*.pcss', gulp.parallel('css'));
     gulp.watch('src/**/*.html', gulp.parallel('html'));
+    gulp.watch('src/**/*.js', gulp.parallel('js'));
+    gulp.watch(
+        "src/fonts/**/*.*",
+        gulp.parallel("font-woff", "font-woff2", "font-eot"),
+    );
+    gulp.watch("src/img/**/*.*", gulp.parallel("images"));
 });
+
 
 
 gulp.task('browser-sync', () => {
@@ -102,6 +211,11 @@ gulp.task(
         'browser-sync',
         'watch',
         'css',
-        'html'
+        'html',
+        'js',
+        "font-woff",
+        "font-eot",
+        "font-woff2",
+        "images"
     ),
 );
